@@ -1,32 +1,121 @@
-# Consumindo API pública da origamid
+📦 Consumo de API Pública com React
 
-Sou um dos alunos do curso de React Completo da origamid e este é um pequeno exemplo de consumo de API utilizando blocos try, catch para capturar erros de rede "HTTP".
+Este repositório demonstra um exemplo prático de consumo de API utilizando React, com foco em boas práticas de tratamento de erros, controle de estado e renderização condicional.
 
-🔧## Tecnologias utilizadas
-- NodeJS versão: 24.12.0
-- Vite versão: 7.2.4
-- React JS versão: 19.2.0
+O projeto foi desenvolvido como uma extensão da aula de nº #301 que faz parte do curso React Completo, da Origamid, e tem caráter educacional.
 
-# O que o código faz?
+🎯 Objetivo do Projeto
 
-Consome dados de um API de produtos fictícios criados única e exclusivamente para fins de estudo.
-Verifica possíveis erros de rede e retorna no console de forma mais amigável para o desenvolvedor.
+Consumir dados de uma API pública de produtos
 
-# Em que consiste o código dessa aplicação ?
+Demonstrar o uso de fetch com async/await
 
-São basicamente dois arquivos principais, sendos estes: App.jsx e Produto.jsx. No App.jsx está 99% da lógica do programa.
+Tratar erros de rede e HTTP com try/catch
 
-Na função principal de App crio dois hooks sendo um para controlar e armazenar os estados dos dados e um outro para prover um loading enquanto carrego os dados da API. O loading nada mais é do que uma simples tag <p> Carregando... </p> que aparecerá caso a chamada da API demore mais que o habitual, sendo quase instântanea essa chamada.
+Implementar estado de carregamento (loading) para melhorar a experiência do usuário
 
-logo abaixo dos hooks seguem uma função maniupuladora do evento de clique nos botões que viram a seguir; Essa função ira iniciar com um bloco try que irá setar o estado de loading para verdadeiro indicando que os dados da API estão sendo carregados, em seguida temos uma constante response que receberá as informações da promise retornada pelo fetch da nossa api pública: "https://ranekapi.origamid.dev/json/api/produto/" o parâmetro da função assincrona se encarrega de pegar o texto de cada botão.
+Manter o código simples, legível e alinhado a boas práticas
 
-Logo após verificamos se o status da nossa response não foi verdadeiro, caso não tenha sido, capturaremos o erro e lançaremos logo abaixo no bloco catch.
+🛠️ Tecnologias Utilizadas
 
-Em seguida atribuímos a uma constante json a resposta dos dados em formato json e setamos os dados no nosso hook.
+Node.js — v24.12.0
 
-SetLoading se torna falso o que indica que o carregamento ocorreu e não será mais necessário.
+Vite — v7.2.4
 
-#return JSX
+React — v19.2.0
 
-No nosso retorno da função componente App temos três botões cada um indicando um produto diferente que será chamado pela API ao ser realizado o clique. e em seguida duas renderizações condicionais são disparadas caso o loading seja true e outra para quando o loading se tornar false renderizando também nosso componente Produto que mostrará título do produto, preço, imagem e descrição.
+🔗 API Utilizada
 
+Os dados são consumidos a partir da API pública de estudos da Origamid:
+
+https://ranekapi.origamid.dev/json/api/produto/
+
+Trata-se de uma API fictícia, criada exclusivamente para fins educacionais.
+
+⚙️ Funcionalidades
+
+Busca dinâmica de produtos a partir de botões
+
+Exibição de:
+
+Título
+
+Preço
+
+Imagem
+
+Descrição
+
+Feedback visual durante o carregamento dos dados
+
+Tratamento de erros de requisição exibidos no console de forma clara
+
+🧠 Estrutura do Projeto
+
+O funcionamento da aplicação se baseia principalmente em dois arquivos:
+
+📁 App.jsx
+
+Responsável por 99% da lógica da aplicação, incluindo:
+
+Criação de dois hooks principais:
+
+useState para armazenar os dados do produto
+
+useState para controle do estado de carregamento (loading)
+
+Função assíncrona que:
+
+Inicia o carregamento (setLoading(true))
+
+Realiza a requisição via fetch
+
+Verifica erros HTTP através de response.ok
+
+Converte a resposta para JSON
+
+Atualiza o estado com os dados retornados
+
+Finaliza o carregamento (setLoading(false))
+
+O texto de cada botão é utilizado como parâmetro dinâmico para definir qual produto será buscado na API.
+
+📁 Produto.jsx
+
+Componente responsável exclusivamente pela apresentação dos dados, mantendo o princípio de separação de responsabilidades.
+
+Exibe:
+
+Nome do produto
+
+Preço formatado
+
+Imagem
+
+Descrição
+
+🧩 Renderização Condicional
+
+No retorno JSX do componente App, temos:
+
+Três botões, cada um representando um produto diferente
+
+Renderização condicional para:
+
+Exibir "Carregando..." enquanto os dados são buscados
+
+Renderizar o componente Produto quando os dados estão disponíveis
+
+Essa abordagem garante uma interface responsiva e previsível, mesmo em cenários de latência de rede.
+
+📌 Boas Práticas Aplicadas
+
+Uso de async/await para melhor legibilidade
+
+Tratamento explícito de erros HTTP
+
+Estados bem definidos e com responsabilidade clara
+
+Componentes reutilizáveis
+
+Código organizado e de fácil manutenção
