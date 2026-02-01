@@ -1,10 +1,10 @@
-📦 #Consumo de API Pública com React
+#Consumo de API Pública com React 📦
 
 Este repositório demonstra um exemplo prático de consumo de API utilizando React, com foco em boas práticas de tratamento de erros, controle de estado e renderização condicional.
 
 O projeto foi desenvolvido como uma extensão da aula de nº #301 que faz parte do curso React Completo, da Origamid, e tem caráter educacional.
 
-🎯 #Objetivo do Projeto
+#Objetivo do Projeto 🎯
 
 Consumir dados de uma API pública de produtos
 
@@ -16,7 +16,7 @@ Implementar estado de carregamento (loading) para melhorar a experiência do usu
 
 Manter o código simples, legível e alinhado a boas práticas
 
-🛠️ #Tecnologias Utilizadas
+#Tecnologias Utilizadas 🛠️
 
 Node.js — v24.12.0
 
@@ -32,7 +32,7 @@ https://ranekapi.origamid.dev/json/api/produto/
 
 Trata-se de uma API fictícia, criada exclusivamente para fins educacionais.
 
-⚙️ #Funcionalidades
+#Funcionalidades ⚙️
 
 Busca dinâmica de produtos a partir de botões
 
@@ -50,11 +50,11 @@ Feedback visual durante o carregamento dos dados
 
 Tratamento de erros de requisição exibidos no console de forma clara
 
-🧠 #Estrutura do Projeto
+#Estrutura do Projeto 🧠
 
 O funcionamento da aplicação se baseia principalmente em dois arquivos:
 
-📁 #App.jsx
+#App.jsx 📁
 
 Responsável por 99% da lógica da aplicação, incluindo:
 
@@ -93,8 +93,8 @@ Preço formatado
 Imagem
 
 Descrição
-
-🧩 #Renderização Condicional
+ 
+#Renderização Condicional 🧩
 
 No retorno JSX do componente App, temos:
 
@@ -108,7 +108,7 @@ Renderizar o componente Produto quando os dados estão disponíveis
 
 Essa abordagem garante uma interface responsiva e previsível, mesmo em cenários de latência de rede.
 
-📌 #Boas Práticas Aplicadas
+#Boas Práticas Aplicadas 📌
 
 Uso de async/await para melhor legibilidade
 
